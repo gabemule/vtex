@@ -1,0 +1,31 @@
+{
+  "name": "chckt",
+  "version": "0.1.0",
+  "description": "Dev Checkout",
+  "readmeFilename": "README.md",
+  "serverPort": "8080",
+  "author": {
+    "name": "Gabriel Mule",
+    "email": "gabemule@gmail.com",
+    "url": "https://github.com/gabemule"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/gabemule/chckt"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-beep": "^0.3.1",
+    "grunt-bower-task": "~0.3.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compass": "^1.0.3",
+    "grunt-contrib-compress": "~0.9.1",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}

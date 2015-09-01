@@ -1,0 +1,66 @@
+<div class="container">
+
+  <h1>Dev Shop</h1>
+
+  <input ng-model="filterMembers" placeholder="Digite aqui a sua busca..." type="search">
+
+  <table>
+
+    <thead>
+      <tr>
+        <td>
+          Avatar
+        </td>
+        <td>
+          Nome
+        </td>
+        <td>
+          Followers
+        </td>
+        <td>
+          Qtd
+        </td>
+        <td>
+          Total
+        </td>
+      </tr>
+    </thead>
+
+    <tbody ng-init="qty=0;" ng:repeat="member in memberList | filter: filterMembers">
+      <tr ng-if="user.id == member.id" ng:repeat="user in usersList">
+        <td>
+          <img ng-src="{{member.avatar_url}}" style="display:none;"/>
+        </td>
+        <td>
+          <a ng-href="{{member.html_url}}" target="_blank">{{member.login}}</a>
+        </td>
+        <td>
+          R$
+          {{user.followers}}
+        </td>
+        <td>
+          <input min="0" ng-model="qty" type="number">
+        </td>
+        <td>
+          {{qty * user.followers | currency:"R$ ":0}}
+        </td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          Ttl
+        </td>
+      </tr>
+    </tfoot>
+
+  </table>
+
+  <button name="button" type="button">Checkout</button>
+
+</div>
